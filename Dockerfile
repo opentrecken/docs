@@ -2,6 +2,10 @@ FROM python:alpine3.18 as builder
 WORKDIR /build
 
 # install build dependencies
+RUN apk add --update --no-cache \
+      build-base gcc python3-dev postgresql-dev musl-dev libffi-dev
+
+# install python deps
 COPY requirements.txt /build/requirements.txt
 RUN pip install -r requirements.txt
 
