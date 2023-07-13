@@ -3,7 +3,8 @@ WORKDIR /build
 
 # install build dependencies
 RUN apk add --update --no-cache \
-      build-base gcc python3-dev postgresql-dev musl-dev libffi-dev
+      build-base gcc python3-dev musl-dev libffi-dev \
+      jpeg-dev zlib-dev
 
 # install python deps
 COPY requirements.txt /build/requirements.txt
