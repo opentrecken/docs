@@ -1,0 +1,92 @@
+site_name: OpenTrecken
+site_description: Empowering Cannabis Cultivation in Controlled Environments
+
+repo_url: https://github.com/opentrecken/docs
+
+nav:
+  - Home: 'index.md'
+  - Hardware:
+    - 'hardware.md'
+  - Software:
+    - 'hardware.md'
+  - Control:
+    - 'control.md'
+  - Monitoring:
+    - 'monitoring.md'
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - navigation.instant
+    - header.autohide
+
+extra:
+  # alternate:
+  #   - name: English
+  #     link: /en/ 
+  #     lang: en
+
+  #   - name: Deutsch
+  #     link: /de/
+  #     lang: de
+  social:
+    # - icon: fontawesome/brands/twitter 
+    #   link: https://twitter.com/squidfunk
+    #   name: squidfunk on Twitter
+      
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+plugins:
+  - search:
+  #- monorepo:
+  - mermaid2:
+    #  arguments:
+    #    theme: 'dark'
+  - include_dir_to_nav:
+copyright: MIT License
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - toc
+
+  # syntax highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite:
+  - pymdownx.snippets:
+      base_path: roles
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format 
+
+          
