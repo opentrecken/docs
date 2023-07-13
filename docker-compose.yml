@@ -1,7 +1,7 @@
 version: "3"
 services:
   opentrecken_docs:
-    image: opentrecken/docs:latest
+    image: ghcr.io/opentrecken/docs:latest
     build:
       context: .
       dockerfile: Dockerfile
